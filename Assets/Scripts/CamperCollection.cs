@@ -19,10 +19,10 @@ public class CamperCollection : MonoBehaviour {
         
         if (collected)
         {
-            Debug.Log("collected works");
+//            Debug.Log("collected works");
             if (Vector3.Distance(gameObject.transform.position, GameObject.Find("Player").transform.position) > 5f)
             {          
-                Debug.Log("other if works");
+                //Debug.Log("other if works");
                 float step = speed * Time.deltaTime;
                 gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, GameObject.Find("Player").transform.position, step);
 
@@ -33,30 +33,23 @@ public class CamperCollection : MonoBehaviour {
         //once all the campers have been collected, one more cutscene and then you win
        
     }
-    void OnTriggerEnter(Collider thing)
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-//            transform.parent.SetParent(thing.transform);
-           // transform.SetParent(thing.transform);
 
-        }
-
-    }
     void OnTriggerStay(Collider thing)
     {
-
+        Debug.Log(thing.name + "thing entered trigger");
         if (Input.GetKeyDown(KeyCode.Space))
         {
 //            transform.parent.SetParent(thing.transform);
            // transform.SetParent(thing.transform);
-            Debug.Log("hi");
-            if (collected == false)
+           // Debug.Log("hi");
+            if (thing.name == "Player")
             {
-                GameObject.Find("Player").GetComponent<CamperCount>().numCollected += 1f;
-                collected = true;
+                if (collected == false)
+                {
+                    GameObject.Find("Player").GetComponent<CamperCount>().numCollected += 1f;
+                    collected = true;
+                }
             }
-
 
                 
 

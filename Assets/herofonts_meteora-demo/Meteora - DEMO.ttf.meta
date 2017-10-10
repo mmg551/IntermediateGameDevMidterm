@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e2e1fbc10148f4a87bf65c236e128bbc
+timeCreated: 1507647643
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Meteora DEMO
+  fontNames:
+  - Meteora DEMO
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

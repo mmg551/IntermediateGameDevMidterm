@@ -36,7 +36,7 @@ public class CamperMovement : MonoBehaviour {
         }
         else//raycast failed so move forward
         {//move forward based on rotation
-            transform.Translate(0f, 0f, 10f * Time.deltaTime);
+            transform.Translate(0f, 0f, 15f * Time.deltaTime);
         }
     }
 	
