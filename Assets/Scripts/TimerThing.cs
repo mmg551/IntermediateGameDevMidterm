@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class TimerThing : MonoBehaviour {
-    float timer= 120f;
+    float timer= 180f;
     public Text myText;
 	// Use this for initialization
 	void Start () {
