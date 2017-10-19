@@ -7,7 +7,7 @@ public class CamperCollection : MonoBehaviour {
 	// Use this for initialization
     //once parented it should it should be locked to the back of the player and each consecutive one is placed behind the last
     //maybe when collected, adds them to array of objects and puts them in a specific spot 
-   float speed = 10f;
+   float speed = .5f;
 
     public bool collected = false;
 	void Start () {
@@ -20,11 +20,11 @@ public class CamperCollection : MonoBehaviour {
         if (collected)
         {
 //            Debug.Log("collected works");
-            if (Vector3.Distance(gameObject.transform.position, GameObject.Find("Player").transform.position) > 5f)
+            if (Vector3.Distance(gameObject.transform.position, GameObject.Find("Co").transform.position) > 5f)
             {          
                 //Debug.Log("other if works");
                 float step = speed * Time.deltaTime;
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, GameObject.Find("Player").transform.position, step);
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, GameObject.Find("Co").transform.position, step);
 
 
             }
